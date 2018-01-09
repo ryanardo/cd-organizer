@@ -1,0 +1,16 @@
+{{#partial "content"}}
+    {{#if CDs}}
+    {{#each CDs}}
+        <p>{{ content }}</p>
+    {{/each}}
+    {{else}}
+    {{/if}}
+
+    <form action="/CDS/new" method="post">
+        <label for="content">Enter Content</label>
+        <input id="content" name="content" type="text">
+        <button type="submit">Add CD</button>
+    </form>
+{{/partial}}
+
+{{> layout.hbs }}
