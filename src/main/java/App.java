@@ -14,8 +14,8 @@ public class App {
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            ArrayList<CD> CDs = CD.getAllCD();
-            model.put("CDs", CDs);
+            ArrayList<CD> compactDisk = CD.getAllCD();
+            model.put("CDs", compactDisk);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
